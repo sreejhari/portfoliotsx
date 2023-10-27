@@ -5,7 +5,7 @@ export const AboutMe = () => {
     <div>
          <div className="hero">
         <div className="content">
-          <h2 style={{ color: "Maroon", fontFamily: "serif", fontSize: "30px" }}>
+          <h2 style={{ color: "violet", fontFamily: "serif", fontSize: "30px" }}>
            About Me
           </h2>
           <div className="container-box">
