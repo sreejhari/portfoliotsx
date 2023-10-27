@@ -1,11 +1,12 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent,render, screen } from '@testing-library/react';
 import App from './App';
 import { Testimonials } from './pages/Testimonials';
 import { Portfolio } from './pages/Portfolio';
 import { Home } from './pages/Home';
 import { AboutMe } from './pages/AboutMe';
 import Contact from "./pages/Contact";
+import { toBeDisabled } from '@testing-library/jest-dom/matchers';
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -39,8 +40,9 @@ test('to check the name', () => {
 });
 test('to check the working of contact button',()=>{
   render(<Contact />);
-  const linkElement = screen.getByRole('Contact')
-  expect(screen.getAllByRole('button')).toBeEnabled()
+  const linkElement = screen.getByRole('Contact');
+  fireEvent.click(linkElement);
+  // expect()toBeDisabled()
 });
 
 

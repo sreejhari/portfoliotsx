@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ThemeContext } from "./Theme";
+import { dark } from "@mui/material/styles/createPalette";
 export const Navbar = () => {
+  const {theme,toggleTheme} = useContext(ThemeContext);
+
+ 
   return (
-    <div className="nav">
+    <div className ='nav'>
       <ul>
         <li>
           <Link to="/">Home</Link>
